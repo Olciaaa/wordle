@@ -6,3 +6,9 @@
     margin-bottom: 26px;
     width: 100%;
 }
+
+@media (max-width: 450px) {
+    .row{
+        margin-bottom: 10px;
+    }
+}

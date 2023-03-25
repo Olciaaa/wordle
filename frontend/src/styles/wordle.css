@@ -2,6 +2,7 @@
     width: 400px;
     height: 600px;
     margin: auto;
+    margin-top: 10px;
 }
 
 .box{
@@ -11,4 +12,10 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 0;
+}
+
+@media (max-width:450px) {
+    .frame{
+        width: 90vw;
+    }
 }
