@@ -7,12 +7,12 @@ const WordleComponent = () => {
         <>
         <div className='frame'>
             <div className='box'>
-                <WordleRowComponent className="item item-1"/>
-                <WordleRowComponent className="item item-2"/>
-                <WordleRowComponent className="item item-3"/>
-                <WordleRowComponent className="item item-4"/>
-                <WordleRowComponent className="item item-5"/>
-                <WordleRowComponent className="item item-6"/>
+                <WordleRowComponent word="guess" answer="CWPWC"/>
+                <WordleRowComponent word="which" answer="WWWWW"/>
+                <WordleRowComponent word="craze" answer="WWPWP"/>
+                <WordleRowComponent word="joins" answer="WWWWC"/>
+                <WordleRowComponent word="times" answer="WWCCC"/>
+                <WordleRowComponent word="games" answer="CCCCC"/>
             </div>
 
             </div>
