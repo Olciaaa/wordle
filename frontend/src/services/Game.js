@@ -1,0 +1,19 @@
+import axios from 'axios';
+
+const URL = "http://100.76.236.105:4000";
+
+const GameService = {
+    sendImage: (selectedFile) => {
+        const formData = new FormData();
+        formData.append("image", selectedFile);
+        
+        return axios({
+            method: 'POST',
+            url: `${URL}/game/upload`,
+            data: formData,
+            headers: { "Content-Type": "multipart/form-data" }
+        })
+    }
+}
+
+export { GameService }
