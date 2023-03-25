@@ -1,0 +1,30 @@
+#header{
+    background-color: rgb(51, 55, 58);
+    /* background-image: url(../images/bit-logo-transparent-1000.png);
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    background-position: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+img{
+    max-height: 80%;
+    max-width: 100%;
+}
+h1{
+    margin: 0;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    #header{
+        height: 30%!important;
+    }
+    img{
+        max-height: 20%;
+        max-width: 30%;
+    }
+}

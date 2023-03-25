@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import '../styles/main.css';
 import WordleComponent from './Wordle';
 import Upload from './Upload';
@@ -7,8 +8,11 @@ import Upload from './Upload';
 const Main = () => {
     return (
         <div className="main">
-        <WordleComponent />
-        <Upload />
+            <hr />
+            <Header cssStyle={{'height': 200}}></Header>
+            <hr />
+            <WordleComponent />
+            <Upload />
         </div>
     );
 };
