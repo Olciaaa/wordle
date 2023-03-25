@@ -3,6 +3,7 @@ import Header from './Header';
 import '../styles/main.css';
 import WordleComponent from './Wordle';
 import Upload from './Upload';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Main = () => {
     return (
@@ -10,8 +11,12 @@ const Main = () => {
             <hr />
             <Header cssStyle={{'height': 200}}></Header>
             <hr />
-            <WordleComponent />
-            <Upload />
+            <BrowserRouter>
+                <Routes>
+                    <Route path = "/" element = {<Upload />}/>
+                    <Route path = "/host" element = {<WordleComponent />}/>
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 };
