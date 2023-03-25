@@ -1,11 +1,22 @@
 .letter{
-    border: 2px solid rgba(255, 255, 255, 0.425);
+    border: 2px solid rgb(102, 110, 116);
     padding: 10px;
     width: 50px;
     height: 50px;
     font-weight: bold;
-    color: #ffffff;
+    color: #ccc;
     font-size: 40px;
     margin: 0 auto;
     text-align: center;
+    border-radius: 5px;
+    background-color: rgb(51, 55, 58);
+}
+
+@media (max-width: 450px) {
+    .letter{
+        font-size: 20px;
+        width: 10vw;
+        height: 10vw;
+        padding: 8px;
+    }
 }
