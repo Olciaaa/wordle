@@ -1,10 +1,13 @@
 import React from 'react';
 import '../styles/main.css';
+import WordleComponent from './Wordle';
 
 const Main = () => {
     return (
         <div className="main">
-            Main component
+            
+        <WordleComponent />
+
         </div>
     );
 };

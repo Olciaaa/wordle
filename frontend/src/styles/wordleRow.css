@@ -1,0 +1,8 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 54px;
+    margin-bottom: 26px;
+    width: 100%;
+}
