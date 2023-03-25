@@ -1,12 +1,14 @@
 import React from 'react';
 import '../styles/main.css';
+import WordleComponent from './Wordle';
 import Upload from './Upload';
+
 
 const Main = () => {
     return (
         <div className="main">
-            Main component
-            <Upload />
+        <WordleComponent />
+        <Upload />
         </div>
     );
 };
