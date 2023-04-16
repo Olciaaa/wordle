@@ -21,4 +21,5 @@ app.use("/game", require('./routes/game'));
 
 app.listen(port, function () {
     console.log("Backend API listening on port " + port)
+    console.log("Word of the day is: " + process.argv[2].toUpperCase())
 })
