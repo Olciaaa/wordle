@@ -13,6 +13,13 @@ const GameService = {
             data: formData,
             headers: { "Content-Type": "multipart/form-data" }
         })
+    },
+
+    getWords: () => {
+        return axios({
+            method: 'GET',
+            url: `${URL}/game/retrieve`,
+        })
     }
 }
 

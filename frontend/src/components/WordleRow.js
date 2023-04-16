@@ -6,6 +6,7 @@ const assignColor = (letter) => {
     switch (letter) {
         case "C": return "#00874B"
         case "P": return "#D62429"
+        case "U": return "#151515"
         default: return "#3a3a3c"
     }
 }
