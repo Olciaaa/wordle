@@ -1,4 +1,5 @@
 const express = require('express')
+const axios = require('axios');
 const router = express.Router()
 
 const currentWords = [];
@@ -24,12 +25,18 @@ const generateString = () => {
     return randomString;
 }
 
-const mock = (path) => {
+const mock = (file) => {
     /*TODO 
         Read words from API :)
     */
     return new Promise((resolve, reject) => {
-        resolve(generateString())
+        const fd = new FormData();
+        fd.append('file', file);
+        console.log(fd);
+        axios.post("http://192.168.65.4:5000/process", fd, { headers: { 'Content-Type': 'multipart/form-data' } })
+            .then((response) => {
+                resolve(response.data.word);
+            });
     })
 }
 
@@ -44,10 +51,7 @@ router.post("/upload", (req, res) => {
     let newpath = `${__dirname}/../upload/${image.md5}.${imagepath[imagepath.length-1]}`;
     image.mv(newpath);
 
-    console.log("New image:");
-    console.log(newpath);
-
-    mock(newpath).then((word) => {
+    mock(image).then((word) => {
         let answer = "WWWWW".split("");
         for(let i = 0; i < 5; i++) {
             if(wordOfDay[i] == word[i]) {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = "http://100.76.236.105:4000";
+const URL = "http://localhost:4000";
 
 const GameService = {
     sendImage: (selectedFile) => {
