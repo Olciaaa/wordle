@@ -32,7 +32,6 @@ const mock = (file) => {
     return new Promise((resolve, reject) => {
         const fd = new FormData();
         fd.append('file', file);
-        console.log(fd);
         axios.post("http://192.168.65.4:5000/process", fd, { headers: { 'Content-Type': 'multipart/form-data' } })
             .then((response) => {
                 resolve(response.data.word);
